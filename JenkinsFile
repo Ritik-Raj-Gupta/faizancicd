@@ -9,7 +9,7 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 script {
-                    bat "docker compose up"
+                    sh "docker compose up"
                 }
             }
         }
