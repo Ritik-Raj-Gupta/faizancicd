@@ -9,8 +9,7 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 script {
-                    bat "docker build -t gauravjhagk/frontend:latest ./frontend"
-                    bat "docker build -t gauravjhagk/backend:latest ./backend"
+                    bat "docker compose up"
                 }
             }
         }
