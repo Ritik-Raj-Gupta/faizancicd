@@ -4,21 +4,7 @@ pipeline {
 
 
     stages {
-        stage('Set Git Config') {
-            steps {
-                bat 'git config --global core.autocrlf input'
-                bat 'git config --global core.safecrlf warn'
-                bat 'git config --global i18n.commitEncoding utf-8'
-                bat 'git config --global i18n.logOutputEncoding utf-8'
-            }
-        }
-
-        stage('Checkout Code') {
-            steps {
-                bat 'git version'
-                checkout scm
-            }
-        }
+        
 
         stage('Build Docker Images') {
             steps {
